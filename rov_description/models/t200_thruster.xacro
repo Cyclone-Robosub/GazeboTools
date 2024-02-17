@@ -1,12 +1,12 @@
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro">
-    <xacro:macro name="t200_thruster" params="name pose">
+    <xacro:macro name="t200_thruster" params="name pose prop_type">
         <link name="${name}">
             <pose>${pose}</pose>
             <visual name="thruster_prop_visual">
                 <pose>0 0 0 -1.570796 0 0</pose>
                 <geometry>
                     <mesh>
-                        <uri>model://meshes/t200-cw-prop.dae</uri>
+                        <uri>model://meshes/t200-${prop_type}-prop.dae</uri>
                     </mesh>
                 </geometry>
             </visual>
