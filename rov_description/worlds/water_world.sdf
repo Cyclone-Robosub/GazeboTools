@@ -62,6 +62,5 @@
       <uri>model://rov_proc.sdf</uri>
       <pose>0 0 -0.2 0 0 0</pose>
     </include>
-
   </world>
 </sdf>
