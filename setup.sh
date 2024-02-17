@@ -1,0 +1,1 @@
+export GZ_SIM_RESOURCE_PATH=$(pwd)/rov_description/models:$(pwd)rov_description/worlds:$GZ_SIM_RESOURCE_PATH
