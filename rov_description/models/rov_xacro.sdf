@@ -47,8 +47,7 @@
                 <link_name>base_link</link_name>
                 <water_density>1000</water_density>
 
-                <!-- TODO: Update these to match our actual ROV. Currently using constants from
-            Orca4/BlueRov2 -->
+                <!-- TODO: Update these to match our actual ROV. Currently using constants from Orca4/BlueRov2 -->
                 <!-- Added Mass. Used for Fossen's equations -->
                 <xDotU>0</xDotU>
                 <yDotU>0</yDotU>
@@ -75,17 +74,24 @@
 
             </plugin>
 
-            <xacro:t200_thruster name="thruster1" pose="0.2032 0.25387 0 0 3.14159265359 0" />
+            <!-- Vertial Thrusters -->
+            <!-- <xacro:t200_thruster name="thruster1" pose="0.2032 0.25387 0 0 3.14159265359 0" prop_type="cw"/> -->
+            <xacro:t200_thruster name="thruster1" pose="0.2032 0.25387 0 0 ${pi} 0" prop_type="cw"/>
 
-            <xacro:t200_thruster name="thruster2" pose="-0.2032 0.25387 0 0 3.14159265359 0"/>
+            <xacro:t200_thruster name="thruster2" pose="-0.2032 0.25387 0 0 ${pi} 0" prop_type="ccw"/>
 
-            <xacro:t200_thruster name="thruster3" pose="0.2032 -0.25387 0 0 3.14159265359 0"/>
+            <xacro:t200_thruster name="thruster3" pose="0.2032 -0.25387 0 0 ${pi} 0" prop_type="ccw"/>
 
-            <xacro:t200_thruster name="thruster4" pose="-0.2032 -0.25387 0 0 3.14159265359 0"/>
+            <xacro:t200_thruster name="thruster4" pose="-0.2032 -0.25387 0 0 ${pi} 0" prop_type="cw"/>
 
-            <!-- <xacro:t200_thruster name="thruster5" pose="-0.2032 0.25387 0 0 3.14159265359 0"/> -->
+            <!-- Horizontal/Diagonal Thrusters -->
+            <xacro:t200_thruster name="thruster5" pose="0.152482888 0.152482888 -0.049000000 ${pi/2} 0 ${pi/4}" prop_type="cw"/>
 
+            <xacro:t200_thruster name="thruster6" pose="-0.152482888 0.152482888 -0.049000000 0 0 0" prop_type="cw"/>
+            
+            <xacro:t200_thruster name="thruster7" pose="0.152482888 -0.152482888 -0.049000000 0 0 0" prop_type="cw"/>
 
+            <xacro:t200_thruster name="thruster8" pose="-0.152482888 -0.152482888 -0.049000000 0 0 0" prop_type="cw"/>
         </model>
     </robot>
 </sdf>
