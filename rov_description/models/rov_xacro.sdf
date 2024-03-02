@@ -92,6 +92,11 @@
             <xacro:t200_thruster name="thruster7" pose="0.152482888 -0.152482888 -0.049000000 0 0 0" prop_type="cw"/>
 
             <xacro:t200_thruster name="thruster8" pose="-0.152482888 -0.152482888 -0.049000000 0 0 0" prop_type="cw"/>
+
+            <xacro:include filename="camera.xacro"/>
+            <xacro:lowlight_cam name="front_cam" parent="base_link" xyz="1 1 1" rpy="0 0 0"/>
+
+            <!-- <xacro:include filename="cam2.xacro"/> -->
         </model>
     </robot>
 </sdf>
